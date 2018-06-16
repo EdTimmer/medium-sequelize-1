@@ -1,0 +1,16 @@
+{
+  "name": "medium-sequelize-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "db.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "pg": "^7.4.3",
+    "sequelize": "^4.37.10"
+  }
+}
