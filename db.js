@@ -44,7 +44,7 @@ const seed = () => {
       bender.setShip(planetexpress)
     ]);
   })
-  .catch((error) => console.log(error))
+  .catch(error => console.log(error))
 };
 
 Member.belongsTo(Ship);
@@ -52,15 +52,15 @@ Ship.hasMany(Member);
 
 //SEARCH FOR PUROPSE OF PLANET EXPRESS:
 
-// conn.sync({ force: true })
-//   .then(() => seed())
-//   .then(() => Ship.findOne({
-//     where: {
-//       name: 'Planet Express'
-//     }
-//   }))
-//   .then(ship => console.log(ship.purpose))
-//   .catch(error => console.log(error));
+conn.sync({ force: true })
+  .then(() => seed())
+  .then(() => Ship.findOne({
+    where: {
+      name: 'Planet Express'
+    }
+  }))
+  .then(ship => console.log(ship.purpose))
+  .catch(error => console.log(error));
 
 //SEARCH FOR ROBOT:
 
@@ -86,7 +86,7 @@ Ship.hasMany(Member);
 //   }))
 //   .then(member => Ship.findById(member.shipId))
 //   .then(ship => console.log(ship.name))
-//   .catch((error) => console.log(error));
+//   .catch(error => console.log(error));
 
 //SEARCH FOR LEELA'S SHIP, AN EASY WAY
 
@@ -99,7 +99,7 @@ Ship.hasMany(Member);
 //   }))
 //   .then(member => member.getShip())
 //   .then(ship => console.log(ship.name))
-//   .catch((error) => console.log(error));
+//   .catch(error => console.log(error));
 
 //SEARCH FOR ENTERPRISE CREW
 
@@ -116,17 +116,17 @@ Ship.hasMany(Member);
 //     }
 //   }))
 //   .then(members => members.forEach( member => console.log(member.name)))
-//   .catch((error) => console.log(error));
+//   .catch(error => console.log(error));
 
 //SEARCH FOR ENTERPRISE CREW, AN EASY WAY
 
-conn.sync({ force: true })
-  .then(() => seed())
-  .then(() => Ship.findOne({
-    where: {
-      name: 'Enterprise'
-    }
-  }))
-  .then(ship => ship.getMembers())
-  .then(members => members.forEach( member => console.log(member.name)))
-  .catch((error) => console.log(error));
+// conn.sync({ force: true })
+//   .then(() => seed())
+//   .then(() => Ship.findOne({
+//     where: {
+//       name: 'Enterprise'
+//     }
+//   }))
+//   .then(ship => ship.getMembers())
+//   .then(members => members.forEach( member => console.log(member.name)))
+//   .catch(error => console.log(error));
