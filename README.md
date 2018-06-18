@@ -1,2 +1,5 @@
-1) Create a postgres database named 'ships_db' (e.g., run 'createdb ships_db');
-2) Run 'npm install' to download node_modules, Sequelize, and postgres.
+To be able to run the code in this repo:
+
+1) Make sure you have Sequelize and PostgreSQL installed;
+2) Create a PostgreSQL database named 'ships_db' (e.g., by running command 'createdb ships_db'); and
+3) Run 'npm install'.

@@ -52,15 +52,15 @@ Ship.hasMany(Member);
 
 //SEARCH FOR PUROPSE OF PLANET EXPRESS:
 
-conn.sync({ force: true })
-  .then(() => seed())
-  .then(() => Ship.findOne({
-    where: {
-      name: 'Planet Express'
-    }
-  }))
-  .then(ship => console.log(ship.purpose))
-  .catch(error => console.log(error));
+// conn.sync({ force: true })
+//   .then(() => seed())
+//   .then(() => Ship.findOne({
+//     where: {
+//       name: 'Planet Express'
+//     }
+//   }))
+//   .then(ship => console.log(ship.purpose))
+//   .catch(error => console.log(error));
 
 //SEARCH FOR ROBOT:
 
@@ -120,13 +120,13 @@ conn.sync({ force: true })
 
 //SEARCH FOR ENTERPRISE CREW, AN EASY WAY
 
-// conn.sync({ force: true })
-//   .then(() => seed())
-//   .then(() => Ship.findOne({
-//     where: {
-//       name: 'Enterprise'
-//     }
-//   }))
-//   .then(ship => ship.getMembers())
-//   .then(members => members.forEach( member => console.log(member.name)))
-//   .catch((error) => console.log(error));
+conn.sync({ force: true })
+  .then(() => seed())
+  .then(() => Ship.findOne({
+    where: {
+      name: 'Enterprise'
+    }
+  }))
+  .then(ship => ship.getMembers())
+  .then(members => members.forEach( member => console.log(member.name)))
+  .catch((error) => console.log(error));
