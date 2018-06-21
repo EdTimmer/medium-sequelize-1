@@ -44,7 +44,7 @@ const seed = () => {
       bender.setShip(planetexpress)
     ]);
   })
-  .catch(error => console.log(error))
+  .catch(error => console.log(error));
 };
 
 Member.belongsTo(Ship);
